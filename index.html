@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Verified Editors Hub — Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">VEH</div>
+      <div class="title">Verified Editors Hub</div>
+    </div>
+    <nav class="nav">
+      <button id="btn-hire" class="pill">Hire Editors</button>
+      <button id="btn-find" class="pill outline">Find Projects</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero card">
+      <h1>Connect with verified video editors — fast, secure, direct.</h1>
+      <p class="muted">No fake portfolios. No bidding wars. Just verified professionals.</p>
+      <div class="role-row">
+        <button class="role-card" data-role="editor">
+          <div class="role-icon">✂️</div>
+          <h3>Editor</h3>
+          <p>Create portfolio • Take skill test • Get verified</p>
+        </button>
+        <button class="role-card" data-role="client">
+          <div class="role-icon">🎬</div>
+          <h3>Client</h3>
+          <p>Post projects • Match with editors • Contact directly</p>
+        </button>
+      </div>
+      <div class="cta-row">
+        <button id="demo-continue" class="btn primary">Continue</button>
+        <button id="demo-skip" class="btn ghost">Preview demo</button>
+      </div>
+    </section>
+
+    <section id="editor-dashboard" class="dashboard hidden">
+      <h2>Editor Dashboard</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Verified Badge</h3>
+          <p>Status: <strong class="badge pending">Pending</strong></p>
+          <p>Complete the skill test to earn your badge.</p>
+          <button class="btn" id="open-skill">Enter Skill Test Zone</button>
+        </div>
+        <div class="card">
+          <h3>Portfolio Builder</h3>
+          <p>AI-assisted templates to create a professional portfolio.</p>
+          <button class="btn" id="open-portfolio">Open Portfolio Builder</button>
+        </div>
+        <div class="card">
+          <h3>Visibility Options</h3>
+          <p>Free listing or featured placement (₹199/week).</p>
+          <button class="btn" id="open-feature">Get Featured</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="client-dashboard" class="dashboard hidden">
+      <h2>Client Dashboard</h2>
+      <div class="grid">
+        <div class="card project-form">
+          <h3>Submit a Project</h3>
+          <label>Type of Edit
+            <select id="proj-type">
+              <option>Reels</option>
+              <option>Vlogs</option>
+              <option>Ads</option>
+              <option>Short Film</option>
+            </select>
+          </label>
+          <label>Budget
+            <input id="proj-budget" placeholder="₹5,000" />
+          </label>
+          <label>Deadline
+            <input id="proj-deadline" type="date" />
+          </label>
+          <label>Raw Video (link)
+            <input id="proj-link" placeholder="Google Drive / Dropbox URL" />
+          </label>
+          <label>Notes
+            <textarea id="proj-notes" rows="3" placeholder="Add project details"></textarea>
+          </label>
+          <div class="row">
+            <button class="btn primary" id="find-matches">Find Matches</button>
+            <button class="btn ghost" id="post-public">Post Publicly</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Matched Editors</h3>
+          <div id="matches" class="list muted">AI Match Bot suggestions will appear here after you submit a project.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="explore" class="dashboard hidden">
+      <h2>Explore Editors</h2>
+      <input id="search" placeholder="Search by niche, name, or skill" class="search" />
+      <div id="results" class="results-grid">
+        <!-- generated cards -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modals -->
+  <div id="modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-content card">
+      <button class="modal-close" id="modal-close">✕</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <small>Prototype • Not for production</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
