@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - Demo App</title>
+  <title>Dashboard - Demo App</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,14 +11,18 @@
     <h1>Demo App</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="dashboard.html">Dashboard</a>
+      <a href="dashboard.html" class="active">Dashboard</a>
       <a href="editor.html">Editor</a>
     </nav>
   </div>
   <div class="container">
-    <h2>Welcome to Demo App</h2>
-    <p>This is a sample interface inspired by minimal professional design.</p>
-    <button class="btn">Get Started</button>
+    <h2>Dashboard</h2>
+    <div class="card-grid">
+      <div class="card">📊 Analytics</div>
+      <div class="card">📁 Projects</div>
+      <div class="card">🔔 Notifications</div>
+      <div class="card">⚙ Settings</div>
+    </div>
   </div>
 </body>
 </html>
